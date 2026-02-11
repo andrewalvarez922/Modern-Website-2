@@ -1,12 +1,7 @@
 
 import React from 'react';
 
-interface NavbarProps {
-  onConnectWallet: () => void;
-  isConnected: boolean;
-}
-
-const Navbar: React.FC<NavbarProps> = ({ onConnectWallet, isConnected }) => {
+const Navbar: React.FC = () => {
   return (
     <nav className="fixed w-full z-50 top-0 left-0 px-4 md:px-6 py-4">
       <div className="glass-panel max-w-7xl mx-auto px-6 py-3 rounded-full flex justify-between items-center">
@@ -17,19 +12,18 @@ const Navbar: React.FC<NavbarProps> = ({ onConnectWallet, isConnected }) => {
           </span>
         </div>
         
-        <div className="hidden lg:flex gap-8 text-sm font-semibold text-gray-300">
-          <a className="hover:text-primary transition-colors" href="#">Products</a>
-          <a className="hover:text-primary transition-colors" href="#">Strains</a>
-          <a className="hover:text-primary transition-colors" href="#">Lab Results</a>
-          <a className="hover:text-primary transition-colors" href="#">About Us</a>
+        <div className="hidden lg:flex gap-10 text-sm font-semibold text-gray-300">
+          <a className="hover:text-primary transition-colors" href="#">Premium Retail</a>
+          <a className="hover:text-primary transition-colors" href="#">Wholesale</a>
+          <a className="hover:text-primary transition-colors" href="#">Services</a>
+          <a className="hover:text-primary transition-colors" href="#">Contact Us</a>
         </div>
 
-        <button 
-          onClick={onConnectWallet}
-          className={`bg-gradient-to-r ${isConnected ? 'from-gray-700 to-gray-900 text-white' : 'from-primary to-[#1a3d2f] text-background-dark'} font-bold px-6 py-2 rounded-full hover:shadow-[0_0_20px_rgba(13,242,89,0.4)] transition-all transform hover:-translate-y-0.5 whitespace-nowrap`}
-        >
-          {isConnected ? '0x71C...4e82' : 'Connect Wallet'}
-        </button>
+        <div className="flex items-center">
+          <button className="bg-primary/10 border border-primary/30 text-primary px-6 py-2 rounded-full font-bold text-sm hover:bg-primary hover:text-background-dark transition-all">
+            Get Started
+          </button>
+        </div>
       </div>
     </nav>
   );

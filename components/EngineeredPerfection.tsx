@@ -13,29 +13,28 @@ const services: ServiceItem[] = [
   {
     id: 'cultivation',
     title: 'Cultivation',
-    description: 'Next-gen botanical growth with AI-driven environmental control and proprietary genetic stabilization.',
+    description: 'Scaling agricultural excellence with an annual production capacity exceeding hundreds of thousands of pounds.',
     icon: 'potted_plant',
-    imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBZ26LDWBnePI69Fz4e3ZsNbK6EvW4kLq1K2EwuqjB5eSo7jBZCOHbKun08Hj0ae_H8kPAn1Bf4nEtPgYDSNCumE7C7zAozbvpj-QTLQ5C66EMFdSWIF0P7MZsNY02LIlo2n2wGmr6VGgrTaNweRb5q2qz9o7wJKmSElu9pxgcI1ipAgZXdNeheYVqWaU6SzvNsRcA_PZON2g3awRbxlu1IeDXS5d84sCerRpif8IW6pPiImpwoktqiQ752oGVgGu1LmOnElBsBVAJO'
+    imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBZ26LDWBnePI69Fz4e3ZsNbK6EvW4kLq1K2EwujB5eSo7jBZCOHbKun08Hj0ae_H8kPAn1Bf4nEtPgYDSNCumE7C7zAozbvpj-QTLQ5C66EMFdSWIF0P7MZsNY02LIlo2n2wGmr6VGgrTaNweRb5q2qz9o7wJKmSElu9pxgcI1ipAgZXdNeheYVqWaU6SzvNsRcA_PZON2g3awRbxlu1IeDXS5d84sCerRpif8IW6pPiImpwoktqiQ752oGVgGu1LmOnElBsBVAJO'
   },
   {
     id: 'manufacturing',
     title: 'Manufacturing',
-    description: 'Pharmaceutical-grade extraction and formulation protocols for consistent, high-potency concentrates.',
+    description: 'Operating high-throughput extraction labs that synthesize tens of thousands of kilograms of premium concentrate annually.',
     icon: 'precision_manufacturing',
-    // Using an image that matches the user-provided laboratory bottles with amber oil
     imageUrl: 'https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?q=80&w=1000&auto=format&fit=crop'
   },
   {
     id: 'packaging',
     title: 'Packaging',
-    description: 'Premium sustainable solutions designed for market distinction and regulatory compliance.',
+    description: 'Delivering industry-leading automated packaging and precision filling solutions tailored for global market standards.',
     icon: 'inventory_2',
     imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBuFl_dhSrC0k_ntK-iZUelDh3jOQClAmyEp7lb6HR7EeWRT6HABS-qe8WzbkCCSO2t64K-KTCXgZWJodpEWrIcRpAyoWetOc4_EJys7XNoq7QWQbGJLo4dHDRhrDCAOuAkW1HZWN0bSXHFXJdyCr5ul-FWreVh5B6lqF1Hv1jTdu6v9_5c4aAfvTozBpvkAEf3aakA8vbAj1c2ijJzcsicKyPYmQcCi_2reR51eiteut6-ReRoW2sXsroisFOcgtUowsS6YUh8kcKi'
   },
   {
     id: 'distribution',
     title: 'Distribution',
-    description: 'Secure, climate-controlled global logistics network ensuring purity from facility to shelf.',
+    description: 'A comprehensive logistical network providing secure and expedited fulfillment to over 600 retail partners.',
     icon: 'local_shipping',
     imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBIeaKcRMWBc50J5w8YM7CK04Y6ApjQgjElV-mb8czPhgsOjNgcd_SohWXr6gEoT-LoNE9Xs1vLpRCQK6Vkbkky0gpfy0hVyG0vLjv7ahBtw_ZoUnSbedz5PXgpdMG6FZooEklPP94m2LKvyiVtVZJKXuTJEtRHQo-W74uy1_I5fq5tHTowjONjs6we304TXpOcUsIvsSW9JfqLWjnhskujhict8Uhc1j6l1bT5xG7kYDy57qC91qcNBok2nY8aoTXnUoMlLPaNflgV'
   }
@@ -48,7 +47,7 @@ const EngineeredPerfection: React.FC = () => {
       <div className="absolute bottom-1/4 right-0 w-1/3 h-1/3 bg-[#1a3d2f]/40 rounded-full blur-[120px] pointer-events-none"></div>
       
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 text-left">
           <div>
             <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-2">
               Our Core <span className="text-primary">Services</span>
@@ -72,17 +71,17 @@ const EngineeredPerfection: React.FC = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/50 to-transparent opacity-90"></div>
               
-              {/* Content Container: flex-col with p-8 */}
-              <div className="absolute inset-0 p-8 flex flex-col h-full">
-                {/* Icon aligned top-left */}
-                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary backdrop-blur-md mb-6">
+              {/* Content Container: Explicitly set items-start and text-left */}
+              <div className="absolute inset-0 p-8 flex flex-col h-full items-start text-left">
+                {/* Icon wrapper - ensures it stays top-left */}
+                <div className="w-12 h-12 flex-shrink-0 rounded-full bg-primary/20 flex items-center justify-center text-primary backdrop-blur-md mb-6">
                   <span className="material-icons text-2xl">{service.icon}</span>
                 </div>
                 
                 {/* Text content pushed to the bottom */}
-                <div className="mt-auto">
+                <div className="mt-auto w-full">
                   <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>
-                  <p className="text-gray-300 leading-relaxed mb-6 font-medium text-sm">
+                  <p className="text-gray-100 leading-tight mb-6 font-bold text-base md:text-lg drop-shadow-lg">
                     {service.description}
                   </p>
                   <div className="h-1 w-full bg-white/10 rounded-full overflow-hidden">

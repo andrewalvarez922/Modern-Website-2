@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Ticker from './components/Ticker';
@@ -9,18 +9,9 @@ import CTA from './components/CTA';
 import Footer from './components/Footer';
 
 const App: React.FC = () => {
-  const [walletConnected, setWalletConnected] = useState(false);
-
-  const handleConnectWallet = () => {
-    setWalletConnected(!walletConnected);
-  };
-
   return (
     <div className="relative min-h-screen bg-background-dark">
-      <Navbar 
-        onConnectWallet={handleConnectWallet} 
-        isConnected={walletConnected} 
-      />
+      <Navbar />
       
       <main>
         <Hero />

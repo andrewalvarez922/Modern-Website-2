@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
           <span className="text-primary font-bold tracking-[0.2em] mb-4 text-xs md:text-sm uppercase border border-primary/30 px-4 py-1 rounded-full bg-primary/10 backdrop-blur-sm">
             Business
           </span>
-          <h1 className="text-4xl md:text-7xl font-extrabold text-white mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight">
             Industrial <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-l from-primary to-white">Wholesale</span>
           </h1>
